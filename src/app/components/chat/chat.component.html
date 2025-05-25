@@ -1,0 +1,38 @@
+<div class="chat-container" style="flex: 1">
+  <div class="chat" #chat>
+    <p class="chatbot-message" *ngIf="outputValue" style="order: 99999">
+      {{ outputValue }}
+    </p>
+  </div>
+  <form class="form" (ngSubmit)="send(); inputField.value = ''">
+    <mat-form-field class="form-field">
+      <mat-label>Ask anything</mat-label>
+      <input
+        #inputField
+        type="tel"
+        matInput
+        placeholder="Who is Naïm ?"
+        (input)="updateInputValue(inputField.value)"
+      />
+      <button
+        matSuffix
+        mat-icon-button
+        aria-label="Send"
+        type="submit"
+        style="margin-right: 1rem"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="2.4rem"
+          viewBox="0 -960 960 960"
+          width="2.4rem"
+          fill="#e3e3e3"
+        >
+          <path
+            d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"
+          />
+        </svg>
+      </button>
+    </mat-form-field>
+  </form>
+</div>

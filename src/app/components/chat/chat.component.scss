@@ -1,0 +1,90 @@
+@use "@angular/material" as mat;
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  // height: 40rem;
+  justify-content: space-between;
+  gap: 1rem;
+  // margin-right: 10rem;
+}
+
+.form,
+.form-field {
+  height: fit-content;
+  width: 100%;
+}
+
+.form {
+  width: 80%;
+  margin: 0% auto;
+  --mdc-filled-text-field-label-text-size: 1.5rem;
+  --mat-form-field-container-text-size: 1.5rem;
+  --mat-form-field-container-height: 5.6rem; // 56px
+  --mat-form-field-filled-with-label-container-padding-top: 2.4rem; // 24px
+  --mat-form-field-filled-with-label-container-padding-bottom: 0.8rem; // 8px
+  --mat-form-field-container-vertical-padding: 5rem;
+  --mdc-icon-button-state-layer-size: 4rem;
+  --mdc-icon-button-icon-size: 2.4rem;
+  --mdc-filled-text-field-container-color: transparent;
+
+  mat-form-field .mdc-text-field {
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2.6px;
+  }
+}
+
+.mdc-line-ripple {
+  display: none;
+}
+
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.chat::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat::-webkit-scrollbar-track {
+  display: none;
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--mat-sys-primary) 100%, transparent 80%);
+  border-radius: 0.4rem;
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--mat-sys-primary) 100%, transparent 100%);
+}
+
+.chatbot-message {
+  // background-color: var(--mat-sys-surface-variant);
+  background: color-mix(in srgb, var(--mat-sys-primary) 100%, transparent 100%);
+  align-self: flex-start;
+  border-radius: 1rem;
+  border-top-left-radius: 0%;
+}
+
+.user-message {
+  border: 1px solid var(--mat-sys-primary);
+  color: var(--mat-sys-primary);
+  align-self: flex-end;
+  border-radius: 1rem;
+  border-top-right-radius: 0%;
+  opacity: 0.8;
+}
+
+.chatbot-message,
+.user-message {
+  margin: 0%;
+  max-width: 65%;
+  padding: 1rem;
+}

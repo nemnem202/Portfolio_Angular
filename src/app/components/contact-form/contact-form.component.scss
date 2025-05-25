@@ -1,0 +1,48 @@
+@use "@angular/material" as mat;
+
+.contact-form {
+  position: relative;
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  --mdc-filled-text-field-label-text-size: 1.5rem;
+  --mat-form-field-container-text-size: 1.5rem;
+  --mat-form-field-container-height: 5.6rem; // 56px
+  --mat-form-field-filled-with-label-container-padding-top: 2.4rem; // 24px
+  --mat-form-field-filled-with-label-container-padding-bottom: 0.8rem; // 8px
+  --mat-form-field-container-vertical-padding: 5rem;
+  --mdc-icon-button-state-layer-size: 4rem;
+  --mdc-icon-button-icon-size: 2.4rem;
+  --mdc-filled-text-field-container-color: transparent;
+}
+.contact-form-field {
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.contact-form-field.textarea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2.6px;
+}
+
+.textAreaInput {
+  flex: 1;
+  resize: none;
+  overflow: auto;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+
+.mdc-line-ripple {
+  display: none;
+}
+
+button {
+  align-self: flex-end;
+}

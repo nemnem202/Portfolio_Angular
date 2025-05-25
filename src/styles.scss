@@ -1,0 +1,236 @@
+@use "@angular/material" as mat;
+@use "../theme-colors" as theme-colors;
+@use "sass:map";
+
+:root {
+  --foreground: white;
+  --background: #291a22;
+}
+
+html {
+  font-size: clamp(5px, 0.7vw + 1px, 25px);
+  --mdc-outlined-button-label-text-size: 1.5rem;
+  --mdc-outlined-button-container-height: 4rem;
+  --mat-outlined-button-horizontal-padding: 2.5rem;
+  user-select: none;
+  @include mat.theme(
+    (
+      color: (
+        primary: theme-colors.$primary-palette,
+        theme-type: dark,
+      ),
+      typography: Helvetica,
+      // Helvetica, Arial, sans-serif
+      density: 0,
+      //   high-contrast: mat.high-contrast-overrides(light),
+    )
+  );
+  @include mat.chips-overrides(
+    (
+      outline-color: map.get(theme-colors.$tertiary-palette, 70),
+      label-text-color: map.get(theme-colors.$tertiary-palette, 70),
+    )
+  );
+  @include mat.snack-bar-overrides(
+    (
+      container-color: var(--background),
+      supporting-text-color: var(--foreground),
+      supporting-text-size: min(20px, 5rem),
+      button-color: var(--mat-sys-primary),
+    )
+  );
+}
+
+// .mat-mdc-snack-bar-handset .mat-mdc-snack-bar-container,
+// .mat-mdc-snack-bar-container {
+//   flex: none !important;
+// }
+
+.mat-mdc-snack-bar-container .mat-mdc-snackbar-surface {
+  width: max-content !important;
+  min-width: max-content !important;
+}
+
+.mdc-snackbar__label {
+  width: max-content !important;
+}
+
+html,
+body {
+  height: 100dvh;
+  width: 100dvw;
+  margin: 0%;
+  padding: 0%;
+  color: var(--foreground);
+}
+body {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+app-root {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100dvh;
+  width: 100%;
+  overflow-y: auto;
+  background-image: image-set(url("/background_1.avif") type("image/avif"));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+app-root::-webkit-scrollbar {
+  width: 0px;
+}
+
+app-root::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+app-root::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+app-root::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+/* Firefox */
+app-root {
+  scrollbar-width: 0px;
+  scrollbar-color: transparent transparent;
+}
+
+app {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+router-outlet {
+  display: none;
+}
+
+app-footer {
+  position: fixed;
+  bottom: 0;
+}
+
+// app-header {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   z-index: 1;
+// }
+
+app-home,
+app-contact,
+app-projects,
+app-chat-route {
+  flex: auto 1;
+  height: 40rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem;
+  margin-left: 10rem;
+  margin-right: 0rem;
+  // gap: 20rem;
+  position: relative;
+}
+
+app-home,
+app-contact,
+app-projects {
+  > * {
+    display: flex;
+    // border: 1px solid white;
+    flex-direction: column;
+  }
+}
+
+app-chat {
+  height: 100%;
+}
+
+.left {
+  width: 60%;
+  height: 40rem;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.right {
+  width: 40%;
+  height: 40rem;
+  // max-height: 40rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 10rem;
+}
+
+.right-placement {
+  width: 60%;
+  border-radius: 2rem;
+  // height: 40rem;
+  height: 100%; /* Assurez-vous que .right a une hauteur fixe ou relative */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centrer l'image à l'intérieur de .right */
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2.6px;
+}
+
+.right-placement img {
+  height: 40rem; /* L'image prendra toute la hauteur de .right */
+  width: auto; /* Ajuste la largeur de l'image en fonction de sa hauteur */
+  object-fit: cover; /* L'image couvre entièrement le conteneur sans distorsion */
+}
+
+.title {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.title h1 {
+  font-weight: 100;
+  margin: 0;
+}
+
+.content {
+  height: 40%;
+  font-style: italic;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blue {
+  color: var(--mat-sys-primary);
+}
+
+// .mdc-evolution-chip__action--primary {
+//   padding-left: 0px !important;
+//   padding-right: 0px !important;
+// }

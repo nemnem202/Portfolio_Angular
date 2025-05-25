@@ -1,0 +1,23 @@
+@use "@angular/material" as mat;
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+
+  --mat-tab-header-label-text-size: 1.5rem;
+  --mdc-secondary-navigation-tab-container-height: 7rem;
+  @include mat.tabs-overrides(
+    (
+      divider-color: transparent,
+    )
+  );
+}
+
+.mdc-tab {
+  min-width: 0% !important;
+  padding: 1.5rem !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}

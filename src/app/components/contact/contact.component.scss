@@ -1,0 +1,13 @@
+@use "@angular/material" as mat;
+
+app-contact-form {
+  height: 100%;
+  width: 100%;
+}
+
+.spinner {
+  width: 2.4rem !important;
+  height: 2.4rem !important;
+  --mdc-circular-progress-size: 2.4rem !important;
+  --mdc-circular-progress-active-indicator-width: 2.4rem !important;
+}

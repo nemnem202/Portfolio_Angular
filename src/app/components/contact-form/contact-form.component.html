@@ -1,0 +1,47 @@
+<form class="contact-form">
+  <mat-form-field class="contact-form-field shadow">
+    <mat-label>Enter your name</mat-label>
+    <input matInput #inputName type="text" matInput [formControl]="name" />
+  </mat-form-field>
+  <mat-form-field class="contact-form-field textarea shadow">
+    <mat-label>Type your message</mat-label>
+    <textarea
+      matInput
+      #inputMessage
+      class="textareaInput"
+      rows="400"
+      [formControl]="message"
+    ></textarea>
+  </mat-form-field>
+  <button
+    *ngIf="!loading; else loadingBtn"
+    matSuffix
+    mat-icon-button
+    aria-label="Send"
+    (click)="send()"
+    style="margin: 1rem; position: absolute; bottom: 0"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="2.4rem"
+      viewBox="0 -960 960 960"
+      width="2.4rem"
+      fill="#e3e3e3"
+    >
+      <path
+        d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"
+      />
+    </svg>
+  </button>
+  <ng-template #loadingBtn>
+    <button
+      matSuffix
+      mat-icon-button
+      disabled
+      style="margin: 1rem; position: absolute; bottom: 0"
+      aria-label="Loading"
+    >
+      <mat-spinner class="spinner"></mat-spinner>
+    </button>
+  </ng-template>
+</form>

@@ -1,0 +1,8 @@
+<div class="header">
+  <mat-tab-group
+    (selectedTabChange)="this.routerService.redirect($event.index)"
+    [selectedIndex]="activeLink"
+  >
+    <mat-tab *ngFor="let link of links" [label]="toUpperCase(link)"> </mat-tab>
+  </mat-tab-group>
+</div>

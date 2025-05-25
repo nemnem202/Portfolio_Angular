@@ -1,0 +1,195 @@
+@use "@angular/material" as mat;
+
+.mobile-app-container {
+  font-size: 3rem;
+  width: 100dvw;
+  position: absolute;
+  --mdc-chip-label-text-size: 2rem;
+}
+
+.mat-mdc-snack-bar-container {
+  margin-top: 10rem !important;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+
+  --mat-tab-header-label-text-size: 2.5rem;
+  --mdc-secondary-navigation-tab-container-height: 10rem;
+  @include mat.tabs-overrides(
+    (
+      divider-color: transparent,
+    )
+  );
+}
+
+.mdc-tab {
+  min-width: 0% !important;
+  padding: 1.5rem !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.main-container {
+  height: calc(100dvh - 10rem);
+  margin-top: 10rem;
+  overflow-y: auto;
+}
+
+.view {
+  height: 88dvh;
+  min-height: 360px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2dvh;
+  padding-bottom: 0%;
+  gap: 3%;
+}
+
+.form {
+  width: 100% !important;
+
+  --mdc-filled-text-field-label-text-size: calc(2.5 * 1.5rem) !important;
+  --mat-form-field-container-text-size: calc(2.5 * 1.5rem) !important;
+  --mat-form-field-container-height: calc(2.5 * 5.6rem) !important; // 56px
+  --mat-form-field-filled-with-label-container-padding-top: calc(
+    2.5 * 2.4rem
+  ) !important; // 24px
+  --mat-form-field-filled-with-label-container-padding-bottom: calc(
+    2.5 * 0.8rem
+  ) !important; // 8px
+  --mat-form-field-container-vertical-padding: calc(2.5 * 5rem) !important;
+  --mdc-icon-button-state-layer-size: calc(2.5 * 4rem) !important;
+  --mdc-icon-button-icon-size: calc(2.5 * 2.4rem) !important;
+
+  mat-form-field .mdc-text-field {
+    border-radius: calc(2.5 * 3rem) !important;
+  }
+}
+
+.projects {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2dvh;
+  padding-bottom: 0%;
+  gap: 3%;
+}
+
+.project-techs,
+.chips {
+  display: flex;
+  gap: 1rem;
+}
+
+.moi {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee; // optionnel : fond si l’image n’est pas ronde
+}
+
+.moi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2 {
+  margin: 0%;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 4rem;
+  justify-self: center;
+}
+
+.info {
+  width: 100%;
+  margin-top: 10%;
+}
+
+.info .line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info div .icon {
+  height: 3rem;
+  width: 3rem;
+  font-size: 3rem;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10%;
+  gap: 10%;
+  box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2.6px !important;
+}
+
+.work img {
+  width: 100%;
+}
+
+.work-content {
+  // width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+app-contact-form {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form {
+  height: 80% !important;
+  --mdc-filled-text-field-label-text-size: calc(2.5 * 1.5rem) !important;
+  --mat-form-field-container-text-size: calc(2.5 * 1.5rem) !important;
+  --mat-form-field-container-height: calc(2.5 * 5.6rem) !important; // 56px
+  --mat-form-field-filled-with-label-container-padding-top: calc(
+    2.5 * 2.4rem
+  ) !important; // 24px
+  --mat-form-field-filled-with-label-container-padding-bottom: calc(
+    2.5 * 0.8rem
+  ) !important; // 8px
+  --mat-form-field-container-vertical-padding: calc(2.5 * 5rem) !important;
+  --mdc-icon-button-state-layer-size: calc(2.5 * 4rem) !important;
+  --mdc-icon-button-icon-size: calc(2.5 * 2.4rem) !important;
+  --mat-form-field-container-text-line-height: calc(2.5 * 1.5rem) !important;
+}
+
+.contact-form-field {
+  border-radius: calc(2.5 * 3rem) !important;
+}
+
+.spinner {
+  width: calc(2.5 * 2.4rem) !important;
+  height: calc(2.5 * 2.4rem) !important;
+  --mdc-circular-progress-size: calc(2.5 * 2.4rem) !important;
+  --mdc-circular-progress-active-indicator-width: calc(2.5 * 2.4rem) !important;
+}

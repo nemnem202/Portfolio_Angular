@@ -1,0 +1,64 @@
+<div class="left">
+  <div class="title">
+    <h1>Here are</h1>
+    <h1>my last <span class="blue">projects</span></h1>
+  </div>
+  <div class="content projectsGrid">
+    <div
+      *ngFor="let work of staticWorkArray; let workIndex = index"
+      class="img-container"
+      #imgContainer
+      [attr.data-work-index]="workIndex"
+      (click)="changeWork(workIndex)"
+    >
+      <img class="workimg" [src]="work.image" [alt]="work.title" />
+    </div>
+  </div>
+</div>
+<div class="right">
+  <div class="right-placement" #cardsContainer>
+    <div
+      *ngFor="let work of works; let i = index"
+      class="modal shadow"
+      [ngClass]="positions[(i + 2) % positions.length] || 'none'"
+      (click)="changeWork(i)"
+      [attr.data-index]="i"
+      [ngStyle]="{
+        transform:
+          'translateX(' +
+          i * translateBase +
+          '%) scale(' +
+          (i === 0 ? 1 : 0.8) +
+          ')'
+      }"
+    >
+      <div class="prev-img-container">
+        <img [src]="work.image" [alt]="work.title" />
+      </div>
+      <div class="card-content">
+        <div>
+          <h1 class="cardTitle">{{ work.title }}</h1>
+          <p class="cardP">{{ work.description }}</p>
+        </div>
+        <div>
+          <mat-chip-set aria-label="Techs">
+            <mat-chip
+              *ngFor="let tech of work.techs"
+              (click)="open(tech.link)"
+              >{{ tech.name }}</mat-chip
+            >
+          </mat-chip-set>
+          <a mat-stroked-button [href]="work.source">Open project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 
+<div #cardsContainer class="cards-container">
+  <app-card
+    *ngFor="let offset of [-2, -1, 0, 1, 2]; let i = index"
+    [data]="getWork(currentWorkIndex + offset)"
+    [position]="positions[i]"
+  ></app-card>
+</div> -->

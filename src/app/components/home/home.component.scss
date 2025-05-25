@@ -1,0 +1,30 @@
+button {
+  width: 10rem;
+  border-radius: 0.5rem;
+}
+
+.right-placement {
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+picture {
+  height: 100%;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+}

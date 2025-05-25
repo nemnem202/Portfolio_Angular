@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Sudoku app",
+    "description": "A sudoku app made with Angular and Nest.js for the backend. It uses google O-auth2 Api to login and game data is stored in an SQL databas.",
+    "image": "/sudo.avif",
+    "mobileImage": "/mobile/sudo.jpg",
+    "source": "https://sudoku-backend-u4jv.onrender.com/",
+    "techs": [
+      { "name": "Angular", "link": "https://angular.dev/" },
+      { "name": "Nest.js", "link": "https://nestjs.com/" },
+      {
+        "name": "O-auth2",
+        "link": "https://auth0.com/fr/intro-to-iam/what-is-oauth-2"
+      },
+      { "name": "SQL", "link": "https://sql.sh/" }
+    ]
+  },
+  {
+    "title": "Ai-Chat-bot",
+    "description": "Its a chat bot made with huggingface Api and Mistral LLM. Making this project really improved my skills with Ai integration. I used chatscope library to display the chat.",
+    "image": "/aichat_1.avif",
+    "mobileImage": "/mobile/aichat.jpg",
+    "source": "https://chat-bot-production-8f60.up.railway.app/",
+    "techs": [
+      { "name": "Vite/React", "link": "https://vite.dev/" },
+      { "name": "chatscope", "link": "https://chatscope.io/" },
+      { "name": "huggingface", "link": "https://huggingface.co/" }
+    ]
+  },
+  {
+    "title": "My portfolio",
+    "description": "It is an app made with Next.js and Material-UI. I enjoyed playing with the features Material provides, and I feel more comfortable with it than during the YouTube downloader development.",
+    "image": "/portfo.avif",
+    "mobileImage": "/mobile/portfo.jpg",
+    "source": "https://portfolio-production-967d.up.railway.app/home",
+    "techs": [
+      { "name": "Next.js", "link": "https://nextjs.org/" },
+      { "name": "Material-UI", "link": "https://mui.com/material-ui/" }
+    ]
+  },
+  {
+    "title": "Youtube downloader",
+    "description": "It is a small tool to download the MP4 from a YouTube link. Since I used yt-dlp, it is necessary to download the CLI on your local machine to make it work. I would have loved to deploy it on a host, but YouTube blocks all requests that come from host services by default.",
+    "image": "/downlo_1.avif",
+    "mobileImage": "/mobile/downlo.jpg",
+    "source": "https://github.com/nemnem202/youtube-downloader-app",
+    "techs": [
+      { "name": "React.js", "link": "https://react.dev/" },
+      { "name": "yt-dlp", "link": "https://github.com/yt-dlp/yt-dlp" }
+    ]
+  },
+  {
+    "title": "Piano Training App",
+    "description": "My longest work. As a piano student, I really needed a tool to train my muscle memory and extend my musical vocabulary. It is a pretty complete app that contains a synthesizer, a MIDI interface, and a lot of parameters.",
+    "image": "/piano.avif",
+    "mobileImage": "/mobile/piano.jpg",
+    "source": "https://nemnem202.github.io/react-midi-piano-app/",
+    "techs": [
+      { "name": "React.js", "link": "https://react.dev/" },
+      {
+        "name": "WebMidiApi",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API"
+      },
+      { "name": "Tone.js", "link": "https://tonejs.github.io/" }
+    ]
+  }
+]
