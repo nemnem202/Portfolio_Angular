@@ -1,5 +1,26 @@
 [
   {
+    "title": "SuperMario bros",
+    "description": "An emulator of supermario bros made only using typescript and without using any canvas.",
+    "image": "/mario.avif",
+    "mobileImage": "/mario.avif",
+    "source": "https://super-mario-typescript.vercel.app/",
+    "techs": [
+      { "name": "Typescript", "link": "https://www.typescriptlang.org/" }
+    ]
+  },
+  {
+    "title": "My portfolio V2",
+    "description": "I completely remade my portfolio, which was initially built with Next.js. It now runs on Angular and Nest.js. My Lighthouse scores have improved significantly, and the load time is much lower. I also bought a Domain for the occasion.",
+    "image": "/portfo.avif",
+    "mobileImage": "/mobile/portfo.jpg",
+    "source": "https://naim-el-habbas.art/",
+    "techs": [
+      { "name": "Angular", "link": "https://angular.dev/" },
+      { "name": "Nest.js", "link": "https://nestjs.com/" }
+    ]
+  },
+  {
     "title": "Sudoku app",
     "description": "A sudoku app made with Angular and Nest.js for the backend. It uses google O-auth2 Api to login and game data is stored in an SQL databas.",
     "image": "/sudo.avif",
@@ -25,17 +46,6 @@
       { "name": "Vite/React", "link": "https://vite.dev/" },
       { "name": "chatscope", "link": "https://chatscope.io/" },
       { "name": "huggingface", "link": "https://huggingface.co/" }
-    ]
-  },
-  {
-    "title": "My portfolio",
-    "description": "It is an app made with Next.js and Material-UI. I enjoyed playing with the features Material provides, and I feel more comfortable with it than during the YouTube downloader development.",
-    "image": "/portfo.avif",
-    "mobileImage": "/mobile/portfo.jpg",
-    "source": "https://portfolio-production-967d.up.railway.app/home",
-    "techs": [
-      { "name": "Next.js", "link": "https://nextjs.org/" },
-      { "name": "Material-UI", "link": "https://mui.com/material-ui/" }
     ]
   },
   {
